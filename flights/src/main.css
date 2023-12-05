@@ -183,10 +183,10 @@ h2 {
   .navBar .navBarTwo .navBarMenu .menu .listItem {
     padding: 0.5rem 0;
     cursor: pointer;
-    color: var(--blackColor);
+    color: white;
   }
   .navBar .navBarTwo .navBarMenu .menu .listItem:hover {
-    color: var(--PrimaryColor);
+    color: rgb(85, 161, 204);
     font-weight: 700;
   }
   .navBar .navBarTwo .navBarMenu .btnOne {
@@ -201,7 +201,7 @@ h2 {
 }
 .navBar .navBarTwo .toggleIcon .icon {
   font-size: 30px;
-  color: var(--blackColor);
+  color: aliceblue;
 }
 .navBar .navBarTwo .showNavBar {
   right: 50%;

@@ -186,7 +186,7 @@ h2{
 
   .listItem{
 &:hover{
-  color:rgba(85, 161, 204, 1)
+  color:rgba(85, 161, 204, 1);
 }
   }
 
@@ -221,9 +221,9 @@ h2{
           .listItem{
             padding: 0.5rem 0;
             cursor: pointer;
-            color: var(--blackColor);
+            color: white;
             &:hover{
-              color:var(--PrimaryColor);
+              color:rgba(85, 161, 204, 1);
               font-weight: 700;
             }
           }
@@ -245,7 +245,7 @@ h2{
     .toggleIcon{
       .icon{
         font-size: 30px;
-        color:var(--blackColor);
+        color:aliceblue;
       }
     }
     .showNavBar{
@@ -255,8 +255,7 @@ h2{
   }
 
   .navbar_with_bg{
-    // background: var(--SecondaryColor);
-    // background-color: darkslategray;
+   
   background-color: rgba(30, 81, 110, 1);
 
     padding: .5rem 1rem;
