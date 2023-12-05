@@ -154,7 +154,7 @@ h2 {
   transition: 0.3s ease-in-out;
 }
 .navBar .navBarTwo .listItem:hover {
-  color: var(--PrimaryColor);
+  color: rgb(85, 161, 204);
 }
 .navBar .navBarTwo .logoDiv .Logo {
   width: 70%;
