@@ -2,8 +2,6 @@ import React from "react";
 
 import Dubai from "../../assets/dubai.jpg";
 
-import hotel from "../../assets/hotel.jpeg";
-
 const Support = () => {
   return (
     <div className='support container section'>
