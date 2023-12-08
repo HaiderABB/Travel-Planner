@@ -1,24 +1,23 @@
 import React from "react";
 import Navbar from '../Components/Navbar/Navbar';
-import Home from "../Components/Home/Home";
-import Search from "../Components/Search/Search";
-import Support from "../Components/Support/Support";
+import Home from '../HotelComponents/Home/Home';
+import Search from "../HotelComponents/Search/Search";
+import Support from "../HotelComponents/Support/Support";
 import Info from "../Components/Info/Info";
 import Travelers from "../Components/Travelers/Travelers";
 import Footer from "../Components/Footer/Footer";
-
-const Flights = () => {
+import TopHotels from '../HotelComponents/Hotels/TopHotels';
+const Hotels = () => {
   return (
     <div>
       <Navbar />
-      <Home />
+      <Home></Home>
       <Search></Search>
       <Support></Support>
-      <Info></Info>
-      <Travelers></Travelers>
+      <TopHotels></TopHotels>
       <Footer></Footer>
     </div>
   );
 };
 
-export default Flights;
+export default Hotels;

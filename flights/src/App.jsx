@@ -1,9 +1,11 @@
 import React from "react";
-
 import Flights from './Pages/Flights';
+import Hotels from './Pages/Hotels';
 const App = () => {
   return (
-    <Flights></Flights>
+    // <Flights></Flights>
+    <Hotels></Hotels>
+
   );
 };
 

@@ -1,32 +1,29 @@
 import React from "react";
-import plane_2 from "../../assets/plane_2.jpg";
+import hotels from '../../assets/hotels.jpg'
 
 const Home = () => {
+
   const textStyle = {
     position: 'absolute',
     top: '50%',
     left: '50%',
-    transform: 'translate(-80%, -900%)',
+    transform: 'translate(-150%, 200%)',
     color: 'white',
     fontSize: '24px',
     fontWeight: 'bold',
     textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)',
   };
   return (
-
-  
-
     <div className='home flex container'>
       <div className='mainText'>
         <h1>
-          Craft Unforgettable Journeys with TraVisor: Where Adventures Become
-          Timeless Tales
+        
         </h1>
       </div>
 
       <div className='homeImages flex'>
-        <img src={plane_2} className='plane'></img>
-        <div style={textStyle}>Book Flights with TraVisor</div>
+        <img src={hotels} className='plane'></img>
+        <div style={textStyle}><h1>Hotels</h1></div>
       </div>
     </div>
   );

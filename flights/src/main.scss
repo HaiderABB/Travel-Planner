@@ -301,8 +301,11 @@ h2{
     border:2px solid var(--greyBg);
     border-radius: 16px;
     row-gap: 2rem;
-    // display: flex;
-    // flex-direction: row;
+  
+    .btn{
+      height: 500px;
+    }
+   
 
     .btns{
       // background: var(--SecondaryColor);
@@ -529,7 +532,7 @@ flex-direction: row;
   background: var(--whiteColor);
   padding: 1.5rem 1rem;
   transition: var(--transition);
-  animation: animatedBorders 2.3s infinite;
+  animation: animatedBorders 1s infinite;
   span{
     display: block;
     color: black;
@@ -556,11 +559,10 @@ flex-direction: row;
 &:hover{
 .travelerName{
   bottom: 0;
-  transition: 1.2s ease-in-out;
+  transition: 0.1s ease-in-out;
 }
 
 }
-
       }
     }
   }
