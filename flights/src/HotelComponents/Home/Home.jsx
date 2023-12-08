@@ -7,7 +7,7 @@ const Home = () => {
     position: 'absolute',
     top: '50%',
     left: '50%',
-    transform: 'translate(-150%, 250%)',
+    transform: 'translate(-150%, 200%)',
     color: 'white',
     fontSize: '24px',
     fontWeight: 'bold',

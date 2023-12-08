@@ -2,7 +2,20 @@ import React from "react";
 import plane_2 from "../../assets/plane_2.jpg";
 
 const Home = () => {
+  const textStyle = {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-80%, -900%)',
+    color: 'white',
+    fontSize: '24px',
+    fontWeight: 'bold',
+    textShadow: '2px 2px 4px rgba(0, 0, 0, 0.8)',
+  };
   return (
+
+  
+
     <div className='home flex container'>
       <div className='mainText'>
         <h1>
@@ -13,6 +26,7 @@ const Home = () => {
 
       <div className='homeImages flex'>
         <img src={plane_2} className='plane'></img>
+        <div style={textStyle}>Book Flights with TraVisor</div>
       </div>
     </div>
   );

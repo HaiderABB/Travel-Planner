@@ -6,7 +6,7 @@ import Support from "../HotelComponents/Support/Support";
 import Info from "../Components/Info/Info";
 import Travelers from "../Components/Travelers/Travelers";
 import Footer from "../Components/Footer/Footer";
-
+import TopHotels from '../HotelComponents/Hotels/TopHotels';
 const Hotels = () => {
   return (
     <div>
@@ -14,8 +14,7 @@ const Hotels = () => {
       <Home></Home>
       <Search></Search>
       <Support></Support>
-      <Info></Info>
-      <Travelers></Travelers>
+      <TopHotels></TopHotels>
       <Footer></Footer>
     </div>
   );
