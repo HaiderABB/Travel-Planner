@@ -57,22 +57,22 @@ const Navbar = () => {
 
         <div className={active}>
           <ul className='menu flex'>
-            <li onClick={removeNavBar} className='listItem'>
+            <li onClick={removeNavBar} className='listItem' style={{marginLeft:'-23%'}}>
               Home
             </li>
-            <li onClick={removeNavBar} className='listItem'>
+            <li onClick={removeNavBar} className='listItem' style={{marginLeft:'8%'}}>
               Transport
             </li>
-            <li onClick={removeNavBar} className='listItem'>
+            <li onClick={removeNavBar} className='listItem'  style={{marginLeft:'8%'}}>
               Hotels
             </li>
-            <li onClick={removeNavBar} className='listItem'>
+            <li onClick={removeNavBar} className='listItem' style={{marginLeft:'8%'}}>
               Restaurants
             </li>
-            <li onClick={removeNavBar} className='listItem'>
+            <li onClick={removeNavBar} className='listItem' style={{marginLeft:'8%'}}>
               Guides
             </li>
-            <li onClick={removeNavBar} className='listItem'>
+            <li onClick={removeNavBar} className='listItem' style={{marginLeft:'8%'}}>
               About Us
             </li>
           </ul>
