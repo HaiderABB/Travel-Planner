@@ -26,7 +26,6 @@ const Home = () => {
 
       <div className='homeImages flex'>
         <img src={plane_2} className='plane'></img>
-        <div style={textStyle}>Book Flights with TraVisor</div>
       </div>
     </div>
   );
