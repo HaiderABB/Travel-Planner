@@ -7,6 +7,6 @@ const Controller = require('../controllers/flights');
 router.get('/hello', Controller.hello);
 
 // Get Flights Data
-router.get('/', Controller.getFlights);
+router.post('/', Controller.getFlights);
 
 module.exports = router;
