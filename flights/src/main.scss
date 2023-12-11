@@ -154,7 +154,6 @@ h2{
   }
 
   .navBarOne{
-    // background-color: var(--SecondaryColor);
     
 
     .icon:hover{
@@ -574,6 +573,9 @@ flex-direction: row;
 //  background: var(--SecondaryColor);
 color: aliceblue;
 background: rgba(30, 81, 110, 1);
+position: relative;
+z-index: 100;
+
  .sectionContainer{
   gap: 2.5rem;
   .gridOne{

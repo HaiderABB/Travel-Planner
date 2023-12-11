@@ -1,84 +1,108 @@
-import React, { useState } from "react";
-import { BsPhoneVibrate } from "react-icons/bs";
-import { AiOutlineGlobal } from "react-icons/ai";
-import { CgMenuGridO } from "react-icons/cg";
+import React, { useState } from 'react';
+import { BsPhoneVibrate } from 'react-icons/bs';
+import { AiOutlineGlobal } from 'react-icons/ai';
+import { CgMenuGridO } from 'react-icons/cg';
 
 //Images
 
-import applogo from "../../assets/applogo (2).png";
+import applogo from '../../assets/applogo (2).png';
 
 const Navbar = () => {
   //  Navbar for small width screens
-  const [active, setActive] = useState("navBarMenu");
+  const [active, setActive] = useState('navBarMenu');
   const showNavBar = () => {
-    setActive("navBarMenu showNavBar");
+    setActive('navBarMenu showNavBar');
   };
 
   const removeNavBar = () => {
-    setActive("navBarMenu");
+    setActive('navBarMenu');
   };
 
   // background color for 2nd NavBar
-  const [noBg, addBg] = useState("navBarTwo");
+  const [noBg, addBg] = useState('navBarTwo');
   const addBgColor = () => {
     if (window.scrollY >= 10) {
-      addBg("navBarTwo navbar_with_bg");
+      addBg('navBarTwo navbar_with_bg');
     } else {
-      addBg("navBarTwo");
+      addBg('navBarTwo');
     }
   };
-  window.addEventListener("scroll", addBgColor);
+  window.addEventListener('scroll', addBgColor);
 
   return (
-    <div className='navBar flex'>
-      <div className='navBarOne flex'>
+    <div className="navBar flex">
+      <div className="navBarOne flex">
         <div>{/* <SiConsul></SiConsul> */}</div>
 
-        <div className='none flex'>
-          <li className='flex'>
+        <div className="none flex">
+          <li className="flex">
             <BsPhoneVibrate></BsPhoneVibrate>
             Support
           </li>
-          <li className='flex'>
+          <li className="flex">
             <AiOutlineGlobal></AiOutlineGlobal> Languages
           </li>
         </div>
 
-        <div className='atb flex'>
+        <div className="atb flex">
           {/* <span>Sign In</span>
           <span>Sign Out</span> */}
         </div>
       </div>
 
       <div className={noBg}>
-        <div className='logoDiv'>
-          <img src={applogo} className='Logo'></img>
+        <div className="logoDiv">
+          <img src={applogo} className="Logo"></img>
         </div>
 
         <div className={active}>
-          <ul className='menu flex'>
-            <li onClick={removeNavBar} className='listItem' style={{marginLeft:'-23%'}}>
+          <ul className="menu flex">
+            <li
+              onClick={removeNavBar}
+              className="listItem"
+              style={{ marginLeft: '-23%' }}
+            >
               Home
             </li>
-            <li onClick={removeNavBar} className='listItem' style={{marginLeft:'8%'}}>
+            <li
+              onClick={removeNavBar}
+              className="listItem"
+              style={{ marginLeft: '8%' }}
+            >
               Transport
             </li>
-            <li onClick={removeNavBar} className='listItem'  style={{marginLeft:'8%'}}>
+            <li
+              onClick={removeNavBar}
+              className="listItem"
+              style={{ marginLeft: '8%' }}
+            >
               Hotels
             </li>
-            <li onClick={removeNavBar} className='listItem' style={{marginLeft:'8%'}}>
+            <li
+              onClick={removeNavBar}
+              className="listItem"
+              style={{ marginLeft: '8%' }}
+            >
               Restaurants
             </li>
-            <li onClick={removeNavBar} className='listItem' style={{marginLeft:'8%'}}>
+            <li
+              onClick={removeNavBar}
+              className="listItem"
+              style={{ marginLeft: '8%' }}
+            >
               Guides
             </li>
-            <li onClick={removeNavBar} className='listItem' style={{marginLeft:'8%'}}>
+            <li
+              onClick={removeNavBar}
+              className="listItem"
+              style={{ marginLeft: '8%' }}
+            >
               About Us
             </li>
           </ul>
         </div>
-        <div onClick={showNavBar} className='toggleIcon'>
-          <CgMenuGridO className='icon'></CgMenuGridO>
+        <div onClick={showNavBar} className="toggleIcon">
+          <CgMenuGridO className="icon"></CgMenuGridO>
         </div>
       </div>
     </div>
