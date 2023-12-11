@@ -1,0 +1,127 @@
+[
+    {
+        "flight_number": "ABC123",
+        "airline": "Skyways Airlines",
+        "departure_city": "New York",
+        "destination_city": "Los Angeles",
+        "departure_time": "2023-12-08T08:00:00",
+        "arrival_time": "2023-12-08T11:00:00",
+        "classes": [
+            {
+                "name": "economy",
+                "expense": 300,
+                "seats": 150
+            },
+            {
+                "name": "business",
+                "expense": 600,
+                "seats": 50
+            },
+            {
+                "name": "firstclass",
+                "expense": 1000,
+                "seats": 20
+            }
+        ]
+    },
+    {
+        "flight_number": "XYZ789",
+        "airline": "Global Airways",
+        "departure_city": "London",
+        "destination_city": "Tokyo",
+        "departure_time": "2023-12-09T15:30:00",
+        "arrival_time": "2023-12-10T05:45:00",
+        "classes": [
+            {
+                "name": "economy",
+                "expense": 500,
+                "seats": 150
+            },
+            {
+                "name": "business",
+                "expense": 900,
+                "seats": 50
+            },
+            {
+                "name": "firstclass",
+                "expense": 1500,
+                "seats": 20
+            }
+        ]
+    },
+    {
+        "flight_number": "JKL456",
+        "airline": "Aero Express",
+        "departure_city": "Sydney",
+        "destination_city": "Dubai",
+        "departure_time": "2023-12-11T20:15:00",
+        "arrival_time": "2023-12-12T03:30:00",
+        "classes": [
+            {
+                "name": "economy",
+                "expense": 400,
+                "seats": 150
+            },
+            {
+                "name": "business",
+                "expense": 700,
+                "seats": 50
+            },
+            {
+                "name": "firstclass",
+                "expense": 1200,
+                "seats": 20
+            }
+        ]
+    },
+    {
+        "flight_number": "MNO321",
+        "airline": "Oceanic Airlines",
+        "departure_city": "San Francisco",
+        "destination_city": "Hong Kong",
+        "departure_time": "2023-12-13T12:45:00",
+        "arrival_time": "2023-12-14T08:20:00",
+        "classes": [
+            {
+                "name": "economy",
+                "expense": 450,
+                "seats": 150
+            },
+            {
+                "name": "business",
+                "expense": 800,
+                "seats": 50
+            },
+            {
+                "name": "firstclass",
+                "expense": 1300,
+                "seats": 20
+            }
+        ]
+    },
+    {
+        "flight_number": "PQR987",
+        "airline": "Transcontinental Flights",
+        "departure_city": "Chicago",
+        "destination_city": "Paris",
+        "departure_time": "2023-12-15T09:30:00",
+        "arrival_time": "2023-12-15T14:45:00",
+        "classes": [
+            {
+                "name": "economy",
+                "expense": 350,
+                "seats": 150
+            },
+            {
+                "name": "business",
+                "expense": 650,
+                "seats": 50
+            },
+            {
+                "name": "firstclass",
+                "expense": 1100,
+                "seats": 20
+            }
+        ]
+    }
+]
