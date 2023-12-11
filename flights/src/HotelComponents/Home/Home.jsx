@@ -23,7 +23,6 @@ const Home = () => {
 
       <div className='homeImages flex'>
         <img src={hotels} className='plane'></img>
-        <div style={textStyle}><h1>Hotels</h1></div>
       </div>
     </div>
   );
