@@ -7,11 +7,10 @@ import { MdOutlineFlightClass } from "react-icons/md";
 const Search = () => {
   var d = new Date();
   d.setDate(d.getDate() + 1);
-  d = `${d.getFullYear()}-${d.getMonth()}-${d.getDate()}`;
+  d = `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [date, setDate] = useState(d);
-  // console.log(d);
 
   const dateInputRef = useRef(null);
 
@@ -73,7 +72,6 @@ const Search = () => {
                 />
                 <p>Selected Date: {date}</p>
               </div>
-              {/* <input type='text' placeholder='Day'></input> */}
             </div>
           </div>
 
@@ -88,32 +86,40 @@ const Search = () => {
             </div>
           </div>
 
-          <button className="btn btnBlock flex" onClick={() => {
-            const jsonData = {
+          <button
+            className="btn btnBlock flex"
+            onClick={() => {
+              if (!from || !to || !date) {
+                alert('Please fill in all the fields before searching.');
+                return;
+              }
+
+              const jsonData = {
                 to,
                 from,
-                date
-            };
-            const jsonString = JSON.stringify(jsonData);
-            const apiUrl = 'http://localhost:3005/flights/';
+                date,
+              };
+              const jsonString = JSON.stringify(jsonData);
+              const apiUrl = 'http://localhost:3005/flights/';
 
-            fetch(apiUrl, {
-              method: 'POST',
-              headers: {
-                'Content-Type': 'application/json',
-              },
-              // Include the JSON data in the request body (note: GET requests should not have a body)
-              // This might not be supported by all servers
-              body: jsonString,
-            })
-              .then(response => response.json())
-              .then(data => {
-                console.log('Response:', data);
+              fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                  'Content-Type': 'application/json',
+                },
+                body: jsonString,
               })
-              .catch(error => {
-                console.error('Error:', error);
-              });
-          }}>Search Flight</button>
+                .then(response => response.json())
+                .then(data => {
+                  console.log('Response:', data);
+                })
+                .catch(error => {
+                  console.error('Error:', error);
+                });
+            }}
+          >
+            Search Flight
+          </button>
         </div>
 
         <div className="btns flex">
