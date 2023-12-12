@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import plane_2 from "../../assets/plane_2.jpg";
 import v21 from "../../assets/v21.png";
+import { Link } from "react-router-dom";
 
 
 const Home = () => {
@@ -60,7 +61,9 @@ const Home = () => {
               setShowPopover(false);
             }}
           >
-            Start Planning
+            <Link style={{ color: "white" }} to="/transport">
+              Start Planning
+            </Link>
           </button>
           {/* Popover content */}
           <div style={popoverStyle}>
