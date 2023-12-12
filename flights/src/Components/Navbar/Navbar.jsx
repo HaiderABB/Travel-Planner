@@ -1,33 +1,35 @@
-import React, { useState } from 'react';
-import { BsPhoneVibrate } from 'react-icons/bs';
-import { AiOutlineGlobal } from 'react-icons/ai';
-import { CgMenuGridO } from 'react-icons/cg';
+import React, { useState } from "react";
+import { BsPhoneVibrate } from "react-icons/bs";
+import { AiOutlineGlobal } from "react-icons/ai";
+import { CgMenuGridO } from "react-icons/cg";
+
+import { Link } from "react-router-dom";
 
 //Images
 
-import applogo from '../../assets/applogo (2).png';
+import applogo from "../../assets/applogo (2).png";
 
 const Navbar = () => {
   //  Navbar for small width screens
-  const [active, setActive] = useState('navBarMenu');
+  const [active, setActive] = useState("navBarMenu");
   const showNavBar = () => {
-    setActive('navBarMenu showNavBar');
+    setActive("navBarMenu showNavBar");
   };
 
   const removeNavBar = () => {
-    setActive('navBarMenu');
+    setActive("navBarMenu");
   };
 
   // background color for 2nd NavBar
-  const [noBg, addBg] = useState('navBarTwo');
+  const [noBg, addBg] = useState("navBarTwo");
   const addBgColor = () => {
     if (window.scrollY >= 10) {
-      addBg('navBarTwo navbar_with_bg');
+      addBg("navBarTwo navbar_with_bg");
     } else {
-      addBg('navBarTwo');
+      addBg("navBarTwo");
     }
   };
-  window.addEventListener('scroll', addBgColor);
+  window.addEventListener("scroll", addBgColor);
 
   return (
     <div className="navBar flex">
@@ -52,7 +54,9 @@ const Navbar = () => {
 
       <div className={noBg}>
         <div className="logoDiv">
+        <Link to="/">
           <img src={applogo} className="Logo"></img>
+        </Link>
         </div>
 
         <div className={active}>
@@ -60,42 +64,48 @@ const Navbar = () => {
             <li
               onClick={removeNavBar}
               className="listItem"
-              style={{ marginLeft: '-23%' }}
+              style={{ marginLeft: "-23%" }}
             >
-              Home
+              <Link style={{ color: "white" }} to="/">
+                Home
+              </Link>
             </li>
             <li
               onClick={removeNavBar}
               className="listItem"
-              style={{ marginLeft: '8%' }}
+              style={{ marginLeft: "8%" }}
             >
-              Transport
+              <Link style={{ color: "white" }} to="/transport">
+                Transport
+              </Link>
             </li>
             <li
               onClick={removeNavBar}
               className="listItem"
-              style={{ marginLeft: '8%' }}
+              style={{ marginLeft: "8%" }}
             >
-              Hotels
+              <Link style={{ color: "white" }} to="/hotels">
+                Hotels
+              </Link>
             </li>
             <li
               onClick={removeNavBar}
               className="listItem"
-              style={{ marginLeft: '8%' }}
+              style={{ marginLeft: "8%" }}
             >
               Restaurants
             </li>
             <li
               onClick={removeNavBar}
               className="listItem"
-              style={{ marginLeft: '8%' }}
+              style={{ marginLeft: "8%" }}
             >
               Guides
             </li>
             <li
               onClick={removeNavBar}
               className="listItem"
-              style={{ marginLeft: '8%' }}
+              style={{ marginLeft: "8%" }}
             >
               About Us
             </li>
