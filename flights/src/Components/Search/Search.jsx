@@ -3,6 +3,13 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 import { RiAccountPinCircleLine } from "react-icons/ri";
 import { RxCalendar } from "react-icons/rx";
 import { MdOutlineFlightClass } from "react-icons/md";
+import Box from "@mui/material/Box";
+import Card from "@mui/material/Card";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import Button from "@mui/material/Button";
+import Typography from "@mui/material/Typography";
+import moment from "moment";
 
 const Search = () => {
   var d = new Date();
@@ -11,6 +18,7 @@ const Search = () => {
   const [from, setFrom] = useState("");
   const [to, setTo] = useState("");
   const [date, setDate] = useState(d);
+  const [flights, setFlights] = useState([]);
 
   const dateInputRef = useRef(null);
 
@@ -90,7 +98,7 @@ const Search = () => {
             className="btn btnBlock flex"
             onClick={() => {
               if (!from || !to || !date) {
-                alert('Please fill in all the fields before searching.');
+                alert("Please fill in all the fields before searching.");
                 return;
               }
 
@@ -100,21 +108,22 @@ const Search = () => {
                 date,
               };
               const jsonString = JSON.stringify(jsonData);
-              const apiUrl = 'http://localhost:3005/flights/';
+              const apiUrl = "http://localhost:3005/flights/";
 
               fetch(apiUrl, {
-                method: 'POST',
+                method: "POST",
                 headers: {
-                  'Content-Type': 'application/json',
+                  "Content-Type": "application/json",
                 },
                 body: jsonString,
               })
-                .then(response => response.json())
-                .then(data => {
-                  console.log('Response:', data);
+                .then((response) => response.json())
+                .then((data) => {
+                  console.log("Response:", data);
+                  setFlights(data.flights);
                 })
-                .catch(error => {
-                  console.error('Error:', error);
+                .catch((error) => {
+                  console.error("Error:", error);
                 });
             }}
           >
@@ -127,10 +136,10 @@ const Search = () => {
             className="singleBtn"
             onClick={() => window.open("https://www.etihad.com/", "_blank")}
           >
-            <span>Etihad Airways</span>
+            <span>Flights</span>
           </div>
 
-          <div
+          {/* <div
             className="singleBtn"
             onClick={() => window.open("https://www.emirates.com/", "_blank")}
           >
@@ -144,8 +153,42 @@ const Search = () => {
             }
           >
             <span>Qatar Airways</span>
-          </div>
+          </div> */}
         </div>
+        {flights.map((f, i) => (
+          <Card key={i} sx={{ minWidth: 275 }}>
+            <CardContent>
+              <Typography
+                sx={{ fontSize: 14 }}
+                color="text.secondary"
+                gutterBottom
+              >
+                {f.airline} - Flight {f.flight_number}
+              </Typography>
+              <Typography sx={{ mb: 1.5 }} color="text.secondary">
+                {`${f.departure_city} -> ${f.destination_city}`}
+              </Typography>
+              <Typography variant="body2">
+                Takeoff: {moment(f.departure_time).format("LLL")}
+                <br />
+                Landing: {moment(f.arrival_time).format("LLL")}
+              </Typography>
+              {f.classes.map((c, i) => (
+                <>
+                  <br />
+                  <Typography key={i} variant="body2">
+                    {c.name}
+                    <br />
+                    Seats: {c.seats} - Price: {c.expense}$
+                  </Typography>
+                </>
+              ))}
+            </CardContent>
+            <CardActions>
+              <Button size="small">Book</Button>
+            </CardActions>
+          </Card>
+        ))}
       </div>
     </div>
   );
