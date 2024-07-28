@@ -11,7 +11,7 @@ module.exports.getFlights = async (req, res) => {
     //     date: "2023-12-10T05:45:00",
     // }
 
-    res.status(200).send({
+    res.send({
         flights: flightData.map((f) => {
             f.departure_time = new Date(f.departure_time);
             f.arrival_time = new Date(f.arrival_time);
